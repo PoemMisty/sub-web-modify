@@ -348,6 +348,7 @@ export default {
           "dlj.tf": "https://dlj.tf/short",
         },
         customBackend: {
+          "测试版subconverter-worker-lite": "https://subapi-lite.cce.de5.net",
           "CM提供-负载均衡后端": "https://subapi.cmliussss.net",
           "CM提供-应急备用后端": "https://subapi.fxxk.dedyn.io",
           "肥羊提供-增强型后端": "https://url.v1.mk",
