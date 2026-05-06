@@ -113,11 +113,6 @@
                           </el-row>
                           <el-row :gutter="10">
                             <el-col :span="12">
-                              <el-checkbox v-model="form.sort" label="基础节点排序"></el-checkbox>
-                            </el-col>
-                          </el-row>
-                          <el-row :gutter="10">
-                            <el-col :span="12">
                               <el-checkbox v-model="form.tpl.clash.doh" label="Clash.DoH"></el-checkbox>
                             </el-col>
                             <el-col :span="12">
@@ -150,9 +145,10 @@
                           </el-row>
                           <el-row :gutter="10">
                             <el-col :span="12">
-                              <div style="margin-left: 35%">
-                                <el-checkbox v-model="form.tpl.singbox.ipv6" label="Sing-Box支持IPV6"></el-checkbox>
-                              </div>
+                              <el-checkbox v-model="form.sort" label="基础节点排序"></el-checkbox>
+                            </el-col>
+                            <el-col :span="12">
+                              <el-checkbox v-model="form.tpl.singbox.ipv6" label="Sing-Box支持IPV6"></el-checkbox>
                             </el-col>
                           </el-row>
                           <el-button slot="reference">更多选项</el-button>
