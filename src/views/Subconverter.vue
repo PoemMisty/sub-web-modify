@@ -108,6 +108,11 @@
                               <el-checkbox v-model="form.tfo" label="启用 TFO"></el-checkbox>
                             </el-col>
                             <el-col :span="12">
+                              <el-checkbox v-model="form.uot" label="启用UOT"></el-checkbox>
+                            </el-col>
+                          </el-row>
+                          <el-row :gutter="10">
+                            <el-col :span="12">
                               <el-checkbox v-model="form.sort" label="基础节点排序"></el-checkbox>
                             </el-col>
                           </el-row>
@@ -788,6 +793,7 @@ export default {
         tls13: false,
         udp: false,
         xudp: false,
+        uot: false,
         tfo: false,
         sort: false,
         expand: true,
@@ -1005,6 +1011,8 @@ export default {
         this.form.xudp.toString() +
         "&udp=" +
         this.form.udp.toString() +
+        "&uot=" +
+        this.form.uot.toString() +
         "&tfo=" +
         this.form.tfo.toString() +
         "&expand=" +
@@ -1190,6 +1198,9 @@ export default {
         if (param.get("udp")) {
           this.form.udp = param.get("udp") === 'true';
         }
+        if (param.get("uot")) {
+          this.form.uot = param.get("uot") === 'true';
+        }
         if (param.get("tfo")) {
           this.form.tfo = param.get("tfo") === 'true';
         }
@@ -1231,6 +1242,7 @@ export default {
       data.append("emoji", encodeURIComponent(this.form.emoji.toString()));
       data.append("list", encodeURIComponent(this.form.nodeList.toString()));
       data.append("udp", encodeURIComponent(this.form.udp.toString()));
+      data.append("uot", encodeURIComponent(this.form.uot.toString()));
       data.append("tfo", encodeURIComponent(this.form.tfo.toString()));
       data.append("expand", encodeURIComponent(this.form.expand.toString()));
       data.append("scv", encodeURIComponent(this.form.scv.toString()));
