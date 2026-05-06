@@ -86,7 +86,7 @@
                         <el-col>
                           <el-checkbox v-model="form.nodeList" label="仅输出节点信息" border></el-checkbox>
                         </el-col>
-                        <el-popover placement="bottom" v-model="form.extraset">
+                        <el-popover placement="bottom" width="360" v-model="form.extraset">
                           <el-row :gutter="10">
                             <el-col :span="12">
                               <el-checkbox v-model="form.emoji" label="Emoji"></el-checkbox>
